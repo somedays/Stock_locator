@@ -548,9 +548,9 @@ a:hover{color:#00819e}
 
 .sl_main_model_gp {display:flex;border-top:2px solid #f6f3f2;}
 .sl_main_model_gp:first-child {border-top:0 none;}
-.sl_main_model_gp_tt {flex:0 0 20%;}
+.sl_main_model_gp_tt {flex: 0 0 24%;}
 .sl_main_model_gp_tt strong {display:inline-block;vertical-align:top;font-size:4rem;font-family: HyundaiHeadMedium, sans-serif;color:#b7b7b7;padding:4rem 0 0 4rem;}
-.sl_main_model_list {flex:1;padding:0 5%;}
+.sl_main_model_list {flex:1;padding: 0 3%;}
 .sl_main_model_list:after {content:"";display:block;clear:both;}
 .sl_main_model_list .sl_main_model {float:left;width:30%;padding:2rem 0;}
 .sl_main_model_list .sl_main_model .sl_main_model_img {text-align:center;height:150px;}

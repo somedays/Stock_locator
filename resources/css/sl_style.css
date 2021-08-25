@@ -247,10 +247,12 @@ a:hover{color:#00819e}
 .sl_car_keyfacts {display:flex;flex-wrap: wrap;}
 .sl_car_keyitem {display:inline-flex;flex:0 0 25%;flex-direction:column;}
 .sl_car_keyitem span {display:block;font-family:HyundaiHeadReg;font-size:1.6rem;line-height:3rem;color:#767676;margin-top:1.5rem;}
-.sl_car_keyitem strong {display:block;font-family:HyundaiHeadReg;font-size:1.6rem;line-height:3rem;color:#1c1b1b;white-space:nowrap;}
+.sl_car_keyitem strong {display:block;font-family:HyundaiHeadReg;font-size:1.6rem;line-height:3rem;color:#1c1b1b;position:relative;}
 .sl_car_keyitem strong i,
 .sl_car_keyitem strong em {display:inline-block;vertical-align:middle;}
-.sl_car_keyitem strong em {max-width: calc(100% - 35px);overflow: hidden;text-overflow: ellipsis;}
+.sl_car_keyitem strong em {display:none;}
+.sl_car_keyitem strong:hover em {display:block;position:absolute;top: -40px;left: 5.5%;transform:translateX(-50%);white-space: nowrap;overflow:inherit;width:auto;margin-right:0;background-color:#fff;border:2px solid #121212;padding:0 5px;color:#121212;}
+.sl_car_keyitem strong:hover em:after {content:"";display:block;width: 0;height: 0;border-left: 7px solid transparent;border-right: 7px solid transparent;border-top: 7px solid #121212;position: absolute;top: 31px;left: 50%;margin-left: -7px;z-index:10;}
 .sl_car_keyitem strong img {width:2.4rem;height:2.4rem;margin-right:.5rem;}
 
 .sl_car_info_btm_area {float:left;width:100%;}

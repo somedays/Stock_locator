@@ -623,7 +623,7 @@ a:hover{color:#00819e}
 
 .sl_inquiry_head {margin:0 auto;max-width:1200px;position:relative;padding-bottom: 4rem;}
 .sl_inquiry_head_img {background-color:#f4f1f1;height:35rem;}
-.sl_inquiry_head h3 {position:absolute;bottom:0;left:-3rem;font-size:6.5rem;padding-bottom: 0;}
+.sl_inquiry_head h3 {position:absolute;bottom:0;left:-3rem;font-size:6.5rem;padding-bottom: 0;text-align:left;}
 
 .sl_inquiry_ctn {margin:0 auto;max-width:80rem;}
 .sl_inquiry_ctn .sl_inquiry_sctn {padding:5rem 0;}
@@ -644,6 +644,18 @@ a:hover{color:#00819e}
 .sl_input_check input:checked + span {border-color:#00AAD2;box-shadow:inset 5rem 0 0 #00AAD2;}
 .sl_inquiry_btn {text-align:center;padding:3rem 0;}
 .sl_inquiry_btn .sl_button {min-width:300px;}
+
+.sl_thanks_head {margin:0 auto;max-width:1200px;position:relative;padding-bottom: 4rem;}
+.sl_thanks_head_img {background-color:#f4f1f1;height:35rem;}
+.sl_thanks_head h3 {position:absolute;bottom:0;left:-3rem;font-size:6.5rem;padding-bottom: 0;text-align:left;}
+
+.sl_thanks_ctn {margin:0 auto;max-width:100rem;padding:5rem 0;}
+.sl_thanks_ctn h4 {text-align:left;padding:0 2rem;font-size:5rem;font-family:HyundaiHeadMedium,sans-serif;}
+.sl_thanks_ctn p {text-align:left;padding:0 2rem;font-size:2rem;font-family:HyundaiHeadReg,sans-serif;}
+.sl_thanks_ctn .msg {font-family:HyundaiHeadReg,sans-serif;text-align:center;font-size:1.5rem;padding-top:7rem;}
+
+.sl_thanks_btn {text-align:center;padding:3rem 0 0 0;}
+.sl_thanks_btn .sl_button {min-width:300px;}
 
 
 .sl_dealer {max-width:1200px;margin:0 auto;position:relative;}
@@ -830,6 +842,7 @@ a:hover{color:#00819e}
     .sl_header.index .sl_header_wrap {padding:0 8%;}
     .sl_header.index + .sl_container > .sl_ctn_wrap {padding-top:20rem;}
     .sl_header.index + .sl_container > .sl_ctn_wrap.sl_disclaimer {padding-top:0;}
+    .sl_header .sl_logo:only-child {margin-left:2rem;}
     .sl_header .sl_logo a .icon-hyundai-logo-desktop {font-size:1.82rem;}
     .sl_main_model_gp {flex-direction: column;}
     .sl_main_model_list .sl_main_model {width:100%;}
@@ -962,8 +975,16 @@ a:hover{color:#00819e}
     .sl_dealer_search_item {flex:0 0 100%;margin-right:2rem;padding:2rem 2rem 2rem 0;background-color:#002C5F;}
 
     .sl_inquiry_head {max-width:100%;padding:0 2rem;}
+    .sl_inquiry_head h3 {font-size:4rem;text-align:center;top:0;left:0;right:0;bottom:0;line-height:15rem;}
     .sl_inquiry_head_img {height: 15rem;}
     .sl_inquiry_ctn {max-width:100%;padding:0 2rem;}
+    .sl_thanks_head {max-width:100%;padding:0 2rem;}
+    .sl_thanks_head h3 {font-size:4rem;text-align:center;top:0;left:0;right:0;bottom:0;line-height:15rem;}
+    .sl_thanks_head_img {height: 15rem;}
+    .sl_thanks_ctn {max-width:100%;padding:0 2rem;}
+    .sl_thanks_ctn h4 {font-size:3.2rem;padding:2rem 2rem 1rem 2rem;line-height:3.5rem;}
+    .sl_thanks_ctn p {font-size:1.6rem;}
+    .sl_thanks_ctn .msg {padding-top:4rem;}
     .sl_ctn_wrap h4 {text-align:left;}
     .sl_dealer {max-width:100%;padding:0 2rem;}
     .sl_dealer_info {top:auto;bottom: auto;left: auto;width: auto;position: relative;margin: -5rem 2rem 0 2rem;}

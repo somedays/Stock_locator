@@ -725,6 +725,14 @@ a:hover{color:#00819e}
 .sl_popup .sl_pop_ctn_left .pop_nav_item.active:after {content:"";display:block;position:absolute;top:2.1rem;width:9rem;right:0;height:2px;background-color:#002C5F;}
 .sl_popup .sl_pop_ctn_right {flex:1;height:100vh;padding:5rem;box-sizing:border-box;overflow:auto;}
 
+.ie_cookie {position:fixed;bottom:0;right:0;max-width:47.2rem;padding:5rem 7.7rem 5rem 8rem;background-color:#e4dcd3;opacity:0.95;max-height:100%;overflow-y:auto;box-sizing:border-box;}
+.ie_cookie .ie_cookie_tt {font-size:22px;line-height:28px;margin-bottom:1.5rem;font-family:HyundaiHeadMedium,sans-serif;}
+.ie_cookie .ie_cookie_text {font-size:16px;line-height:27px;font-family:HyundaiTextReg,sans-serif;}
+.ie_cookie .ie_cookie_btns {margin-top:3rem;}
+.ie_cookie .ie_cookie_btns .mt15 {margin-top:1.5rem;}
+.ie_cookie .ie_cookie_btns .sl_button {width:100%;border-color:#1c1c1c;padding:1.45rem 2rem;text-align:center;color:#1c1c1c;background-color:transparent;cursor:pointer;}
+.ie_cookie .ie_cookie_btns .sl_button:after {background-color:#1c1c1c;}
+.ie_cookie .ie_cookie_btns .sl_button.primary {background-color:#1c1c1c;color:#fff;}
 
 .sl_footer {background-color:#323232;text-align:center;color:#fff;}
 .sl_footer_wrap {max-width:1387px;margin:0 auto;padding:4rem 10rem;box-sizing:border-box;}

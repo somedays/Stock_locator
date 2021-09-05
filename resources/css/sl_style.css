@@ -533,8 +533,8 @@ a:hover{color:#00819e}
 .sl_main_search_item.select.active:before {transform:rotate(180deg);}
 .sl_main_search_item.search:before {content: "\f106";display:block;position:absolute;top:17px;right:20px;pointer-events:none;font-family: iconfont!important;font-style: normal;font-weight: 400!important;opacity:0;transition:all .3s;}
 .sl_main_search_item.search.active:before {opacity:1;}
-.sl_main_search_item .input_clear {content:"";position:absolute;top: 16px;right: 15px;width: 24px;height: 24px;border:2px solid #fff;padding:0;border-radius:50%;line-height:24px;cursor:pointer;text-align:center;color:#fff;background-color:transparent;}
-.sl_main_search_item .input_clear .icon-close {line-height: 22px;font-size: 1.1rem;}
+.sl_main_search_item .input_clear {content:"";position:absolute;top: 16px;right: 15px;width: 24px;height: 24px;border:0 none;padding:0;border-radius:50%;line-height:20px;cursor:pointer;text-align:center;color:#fff;background-color:transparent;}
+.sl_main_search_item .input_clear .icon-close {line-height: 24px;font-size: 1.1rem;}
 
 .sl_main_search_item .sl_select_list {display:none;position:absolute;top:53px;left:0;right:0;background-color:#002c5f;border:2px solid #fff;border-top:0;z-index:2;max-height:300px;overflow:auto;}
 .sl_main_search_item .sl_select_list.on {display:block;}

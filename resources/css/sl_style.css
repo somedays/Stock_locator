@@ -886,16 +886,19 @@ a:hover{color:#00819e}
     .sl_filter_result button {width:100%;text-align:center;}
     .sl_ctn_filter .sl_filter_nav {overflow-x:auto;overflow-y:hidden;padding:2rem;white-space:nowrap;}
     .sl_filter_form .sl_filter_item {padding:0 5rem;text-align:left;}
-    .sl_filter_check_gp {line-height:5rem;}
+    .sl_filter_check_gp {line-height:5rem;position:relative;}
     .sl_filter_check_gp .sl_filter_check {display:block;}
     .sl_filter_form.trim .sl_filter_check_gp .sl_filter_check {width:100%;}
     .sl_filter_form.powertrain .sl_filter_check_gp .sl_filter_tt {width:100%;}
     .sl_filter_form.powertrain .sl_filter_check_gp .sl_filter_check {width:100%;padding:0;}
+    .sl_filter_form.powertrain .sl_filter_check_gp .sl_filter_check:nth-child(5) {margin-left:0;}
+    .sl_filter_form.powertrain .sl_filter_check_gp .sl_filter_check:nth-child(8) {margin-left:0;}
+    .sl_filter_form.powertrain .sl_filter_check_gp .sl_filter_check:nth-child(11) {margin-left:0;}
     .sl_filter_form.colour .sl_filter_check_gp .sl_filter_tt {width:100%;}
-    .sl_filter_form.colour .sl_filter_check_gp .sl_filter_check {width:100%;padding:0;}
-    .sl_filter_form.colour .sl_filter_check_gp .sl_filter_check:nth-child(6),
-    .sl_filter_form.colour .sl_filter_check_gp .sl_filter_check:nth-child(12),
-    .sl_filter_form.colour .sl_filter_check_gp .sl_filter_check:nth-child(18) {margin-left:0;}
+    .sl_filter_form.colour .sl_filter_check_gp .sl_filter_check {padding:0;width:20%;margin-top: 1rem;position:initial;}
+    .sl_filter_form.colour .sl_filter_check_gp .sl_filter_check:nth-child(11) {margin-left:0;}
+    .sl_filter_form.colour .sl_filter_check_gp .sl_filter_check:hover strong {top: 4.5rem;right:0;left: 0;font-size: 1.3rem;line-height: 2rem;overflow: hidden;text-align: center;transform:translate(0);color: #121212;white-space: nowrap;text-overflow: ellipsis;}
+    .sl_filter_form.colour .sl_filter_check_gp .sl_filter_check:hover strong:after {display:none;}
     .sl_filter_select_items {white-space:nowrap;padding:1rem 3rem 3rem 3rem;overflow-y:hidden;overflow-x:auto;}
     .sl_form_model_list .sl_form_model label:before {display:block;}
     .sl_form_model_list .sl_form_model .sl_form_model_img {height:auto;}
@@ -903,14 +906,13 @@ a:hover{color:#00819e}
     .sl_filter_form .sl_select_item .sl_select_item_tt {text-align:left;}
     .sl_filter_form .sl_select_item {width:100%;}
     .sl_search_results_tt strong {font-size:6rem;line-height:6rem;}
-    .sl_search_results_tt span {font-size:2.8rem;margin-top:-3rem;}
+    .sl_search_results_tt span {font-size:2.8rem;margin-top:-3rem;margin:0 3rem;}
     .sl_search_result {flex-direction:column;padding:4rem 2rem;}
     .result_left {flex:1;}
     .result_left .result_car_img {width:80%;padding-top:3rem;}
     .result_car_name {font-size:2.8rem;text-align:center;padding-top:1rem;line-height:3rem;}
     .result_car_detail_wrap {overflow-x:auto;overflow-y:hidden;}
-    .result_car_detail {width:640px;}
-    .car_detail_item {min-width:160px;}
+    .car_detail_item {min-width:50%;}
     .car_descriptions {padding-right:0;}
     .car_descriptions span {display:inline;}
     .result_car_action .left_action {width:100%;}

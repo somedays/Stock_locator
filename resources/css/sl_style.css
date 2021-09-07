@@ -991,7 +991,7 @@ a:hover{color:#00819e}
     .sl_inquiry_head_img {height: 15rem;}
     .sl_inquiry_ctn {max-width:100%;padding:0 2rem;}
     .sl_thanks_head {max-width:100%;padding:0 2rem;}
-    .sl_thanks_head h3 {font-size:4rem;text-align:center;top:0;left:0;right:0;bottom:0;line-height:15rem;}
+    .sl_thanks_head h3 {font-size: 3rem;text-align:center;left: 2rem;right: 2rem;bottom: 2rem;line-height: 4rem;color: #002c5f;}
     .sl_thanks_head_img {height: 15rem;}
     .sl_thanks_ctn {max-width:100%;padding:0 2rem;}
     .sl_thanks_ctn h4 {font-size:3.2rem;padding:2rem 2rem 1rem 2rem;line-height:3.5rem;}

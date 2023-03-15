@@ -33,7 +33,11 @@
                             <img src="resources/img/icon_full_arrow.svg" class="full" alt="Full Screen">
                             <img src="resources/img/icon_close.svg" class="close" alt="Close">
                         </div>
-                        <div id="slideshow_exterior" class="sl_byv_gly exterior">
+                        <div class="sl_byv_gly_tab">
+                            <div class="sl_gly_tab_item"><input type="radio" name="gly_item" id="gly_ex" checked><label for="gly_ex">Exterior</label></div>
+                            <div class="sl_gly_tab_item"><input type="radio" name="gly_item" id="gly_in"><label for="gly_in">Interior</label></div>
+                        </div>
+                        <div id="slideshow_exterior" class="sl_byv_gly exterior active">
                             <div id="img-1" data-img-id="1" class="img-wrapper active" style="background-image: url('resources/img/exterior/exterior_img_1.png')"></div>
                             <div id="img-2" data-img-id="2" class="img-wrapper"  style="background-image: url('resources/img/exterior/exterior_img_2.png')"></div>
                             <div id="img-3" data-img-id="3" class="img-wrapper"  style="background-image: url('resources/img/exterior/exterior_img_3.png')"></div>
@@ -197,17 +201,46 @@
     </section>
 </div>
 <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
-<script src="js/gallery.js"></script>
+<script src="js/gallery_ex.js"></script>
+<script src="js/gallery_in.js"></script>
 <script>
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+
 $(function(){
+    /* FullScreen */
     $('.sl_byv_gly_full').click( function() {
-        $('body').css('overflow','hidden');
+        $('body').toggleClass('scrollLock');
         $(this).toggleClass('fullscreen');
+        $('.sl_byv_gly_tab').toggleClass('fullscreen');
         $('#slideshow_exterior').toggleClass('fullscreen');
         $('#slideshow_interior').toggleClass('fullscreen');
     });
+    /* button */
+	$('#gly_ex').click(() => {
+		$('#slideshow_exterior').addClass('active')
+		$('#slideshow_interior').removeClass('active')
+	});
+	$('#gly_in').click(() => {
+		$('#slideshow_interior').addClass('active')
+		$('#slideshow_exterior').removeClass('active')
+	});
+
     
-})
+        
+});
+$(window).resize(function() {
+    let mobileW = window.innerWidth;
+    let mobileH = window.innerHeight;
+    if(isMobile) {
+        if( mobileW > mobileH) {
+            $('body').toggleClass('scrollLock');
+            $('.sl_byv_gly_full').toggleClass('fullscreen');
+            $('.sl_byv_gly_tab').toggleClass('fullscreen');
+            $('#slideshow_exterior').toggleClass('fullscreen');
+            $('#slideshow_interior').toggleClass('fullscreen');
+        }
+    };
+});
 </script>
 </body>
 </html>

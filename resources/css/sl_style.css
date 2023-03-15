@@ -31,6 +31,8 @@ a,img{vertical-align:top}
 a{text-decoration:none;color:#002c5f}
 a:hover{color:#00819e}
 
+body.scrollLock {overflow:hidden;}
+
 /* total width */
 .scrollbar::-webkit-scrollbar {background-color:transparent;width:10px;}
 /* background of the scrollbar except button or resizer */
@@ -812,12 +814,23 @@ a:hover{color:#00819e}
 .sl_byv_gly_full.fullscreen .full {display:none;}
 .sl_byv_gly_full.fullscreen .close {display:block;width:28px;}
 
-.sl_byv_gly {width:100%;height:40rem;margin:0 auto 10rem auto;position:relative;}
-.sl_byv_gly.exterior {display:block;}
-.sl_byv_gly.interior {display:none;}
+.sl_byv_gly {width:100%;height:40rem;margin:0 auto 10rem auto;position:relative;display:none;}
+.sl_byv_gly.exterior.active {display:block;}
+.sl_byv_gly.interior.active {display:block;}
 .sl_byv_gly .img-wrapper {width:100%;height:100%;margin-bottom:10rem;position: absolute;top:0;bottom:0;left:0;right:0;overflow:hidden;z-index:8;background-size:100% auto;background-repeat:no-repeat;background-position: center center;background-color:#f4f1f1;}
 .sl_byv_gly .img-wrapper.active {z-index:10;}
 .sl_byv_gly .img-wrapper.last-active {z-index:9;}
+.sl_byv_gly.fullscreen .img-wrapper {background-size:contain;}
+
+.sl_byv_gly_tab {position:absolute;bottom:10rem;left:0;right:0;z-index:20;text-align:center;font-size:0;}
+.sl_byv_gly_tab.fullscreen {position:fixed;z-index:92;bottom:12.5rem;}
+.sl_byv_gly_tab .sl_gly_tab_item {display:inline-block;border:1px solid #ddd;padding:5px;transition:all .3s;}
+.sl_byv_gly_tab .sl_gly_tab_item:first-child {border-radius:20px 0 0 20px;border-right:0 none;padding-right:2px;}
+.sl_byv_gly_tab .sl_gly_tab_item:last-child {border-radius:0 20px 20px 0;border-left:0 none;padding-left:2px;}
+.sl_byv_gly_tab .sl_gly_tab_item input[type="radio"] {display:none;}
+.sl_byv_gly_tab .sl_gly_tab_item input[type="radio"]:checked + label {background-color:#002C5F;color:#fff;}
+.sl_byv_gly_tab .sl_gly_tab_item label {display:inline-block;font-size:14px;font-weight:500;padding:3px 10px;color:#002C5F;cursor:pointer;border-radius:15px;font-family:HyundaiTextMedium,sans-serif;}
+.sl_byv_gly_tab .sl_gly_tab_item label:hover {background-color:#eaeaea;}
 
 .thumbs-container {width: 100%;position: absolute;left: 0;bottom:-10rem;z-index: 11;}
 .thumbs-container .prev,
@@ -828,7 +841,7 @@ a:hover{color:#00819e}
 .thumbs-container .next { float:right;}
 .thumbs-container .prev:hover,
 .thumbs-container .next:hover {color: #002c5f;}
-.thumbs-container .thumbs {position: absolute;top:0;left:0;right:0;padding: 0;margin: 0 5%;overflow: hidden;white-space: nowrap;text-align: center;}
+.thumbs-container .thumbs {position: absolute;top:0;left:0;right:0;padding: 0;margin: 0 4rem;overflow: hidden;white-space: nowrap;text-align: center;}
 .thumbs-container .thumb {display: inline-block;width:150px;height:75px;overflow: hidden;background-size:80% auto;background-position: center center;background-repeat:no-repeat;cursor: pointer;box-sizing:border-box;}
 .thumbs-container .thumb:first-of-type {margin-left: 0px;}
 .thumbs-container .thumb.active {border:2px solid #002c5f;}
@@ -862,6 +875,25 @@ a:hover{color:#00819e}
 
 }
 
+
+
+@media only screen and (max-width:900px){
+    .sl_byv_head_wrap {margin:0 auto 2rem auto!important;}
+    .sl_byv_gly_tab {bottom:3rem;}
+    .sl_byv_gly {height:25rem;margin-bottom:2rem;}
+    .sl_byv_gly_full.fullscreen {top:2rem;right:2rem;}
+    .sl_byv_gly .img-wrapper {margin-bottom:2rem;}
+    .sl_byv_gly_tab.fullscreen {bottom:3rem;}
+
+    .thumbs-container {bottom:-1.5rem;}
+    .thumbs-container .thumbs {display:flex;}
+    .thumbs-container .thumb {flex:1;height:.5rem;background:#ddd;width:auto;margin-left:0 !important;border:1px solid #f4f1f1;box-sizng:border-box;}
+    .thumbs-container .thumb.active {background:#002C5F;border-color:#002C5F;}
+    .thumbs-container .prev {position:absolute;float:none;left:0;bottom:10rem;}
+    .thumbs-container .next {position:absolute;float:none;right:0;bottom:10rem;}
+
+    .sl_byv_gly.fullscreen .thumbs-container .prev {position:fiexd;}
+}
 
 /* Tablet */
 @media only screen and (max-width:768px){
@@ -1125,6 +1157,7 @@ a:hover{color:#00819e}
     .accordion_header>div:before,
     .accordion_items .accordion_header>div:after {display:block;}
     .accordion_header.on + .accordion_content {display:block;}
+    
 
 }
 
